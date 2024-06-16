@@ -1,8 +1,8 @@
 // user_list_screen.dart
-import 'package:bloc_sample_app/presentation/blocs/user_bloc.dart';
-import 'package:bloc_sample_app/presentation/blocs/user_event.dart';
-import 'package:bloc_sample_app/presentation/blocs/user_state.dart';
-import 'package:bloc_sample_app/presentation/pages/user_form_screen.dart';
+import 'package:bloc_sample_app/blocs/user_bloc/user_bloc.dart';
+import 'package:bloc_sample_app/blocs/user_bloc/user_event.dart';
+import 'package:bloc_sample_app/blocs/user_bloc/user_state.dart';
+import 'package:bloc_sample_app/ui/screens/user_form_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

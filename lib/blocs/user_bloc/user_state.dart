@@ -1,5 +1,5 @@
 
-import 'package:bloc_sample_app/domain/entities/user.dart';
+import 'package:bloc_sample_app/data/entities/user.dart';
 import 'package:equatable/equatable.dart';
 
 abstract class UserState extends Equatable {

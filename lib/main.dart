@@ -1,6 +1,6 @@
-import 'package:bloc_sample_app/data/services/api_service.dart';
-import 'package:bloc_sample_app/presentation/blocs/user_bloc.dart';
-import 'package:bloc_sample_app/presentation/pages/user_list_screen.dart';
+import 'package:bloc_sample_app/services/api_service.dart';
+import 'package:bloc_sample_app/blocs/user_bloc/user_bloc.dart';
+import 'package:bloc_sample_app/ui/screens/user_list_screen.dart';
 import 'package:bloc_sample_app/utils/logger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

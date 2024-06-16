@@ -37,7 +37,7 @@
 // blocs/user_bloc/user_bloc.dart
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:bloc_sample_app/data/services/api_service.dart';
+import 'package:bloc_sample_app/services/api_service.dart';
 import 'user_event.dart';
 import 'user_state.dart';
 
