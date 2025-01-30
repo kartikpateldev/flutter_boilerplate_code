@@ -47,7 +47,7 @@ void main() {
       expect(apiService.getUsers(), throwsException);
     });
 
-    test('addUser calls API with correct parameters', () async {
+    test('createUser calls API with correct parameters', () async {
       when(() => mockDio.post(any(), data: any(named: 'data'))).thenAnswer(
         (_) async => Response(
           requestOptions: RequestOptions(path: ''),
@@ -62,7 +62,7 @@ void main() {
           )).called(1);
     });
 
-    test('addUser throws exception when failed', () async {
+    test('createUser throws exception when failed', () async {
       when(() => mockDio.post(any(), data: any(named: 'data'))).thenAnswer(
         (_) async => Response(
           requestOptions: RequestOptions(path: ''),

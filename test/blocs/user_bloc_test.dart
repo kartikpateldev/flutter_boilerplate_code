@@ -1,12 +1,15 @@
 import 'package:bloc_sample_app/blocs/user_bloc/user_bloc.dart';
 import 'package:bloc_sample_app/blocs/user_bloc/user_event.dart';
 import 'package:bloc_sample_app/blocs/user_bloc/user_state.dart';
-import 'package:bloc_sample_app/data/entities/user.dart';
+import 'package:bloc_sample_app/data/models/user_model.dart';
+import 'package:bloc_sample_app/services/api_service.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import '../mocks/mock_api_service.dart';
+// Mock ApiService class
+class 
+MockApiService extends Mock implements ApiService {}
 
 void main() {
   late MockApiService mockApiService;
@@ -22,8 +25,8 @@ void main() {
   });
 
   group('UserBloc', () {
-    final user1 = User(name: 'User1', email: 'user1@example.com');
-    final user2 = User(name: 'User2', email: 'user2@example.com');
+    final user1 = UserModel(name: 'User1', email: 'user1@example.com');
+    final user2 = UserModel(name: 'User2', email: 'user2@example.com');
     final users = [user1, user2];
 
     test('initial state is UserInitial', () {
@@ -65,7 +68,7 @@ void main() {
     blocTest<UserBloc, UserState>(
       'emits [UserLoading, UserLoaded] when AddUser is added and API call is successful',
       build: () {
-        when(() => mockApiService.createUser(any(), any())).thenAnswer((_) async => {});
+        when(() => mockApiService.createUser(any(), any())).thenAnswer((_) async => Future.value());
         when(() => mockApiService.getUsers()).thenAnswer((_) async => users);
         return userBloc;
       },
